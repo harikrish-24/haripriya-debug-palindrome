@@ -1,12 +1,13 @@
 // FUNCTION IMPLEMENTATION (MULTIPLE BUGS)
 const isPalindrome = function(str) {
-  const noSpaces = str.split(" ").join("");
+  const noSpaces = str.split(" ").join("").toLowerCase();
   const midIndex = Math.floor(noSpaces.length/2);
   const lastIndex = noSpaces.length - 1;
 
   for (let i = 0; i < midIndex; i++) {
-    if (str[i] !== str[lastIndex - i]) return false;
+    if (noSpaces[i] !== noSpaces[lastIndex - i]) return false;
   }
+  return true;
 }
 
 // Assertion Function
