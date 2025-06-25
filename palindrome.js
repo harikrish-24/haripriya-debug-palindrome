@@ -1,4 +1,4 @@
-// FUNCTION IMPLEMENTATION (MULTIPLE BUGS)
+
 const isPalindrome = function(str) {
   const noSpaces = str.split(" ").join("").toLowerCase();
   const midIndex = Math.floor(noSpaces.length/2);
@@ -10,7 +10,7 @@ const isPalindrome = function(str) {
   return true;
 }
 
-// Assertion Function
+
 const assertPalindrome = function(word, expected) {
   console.log(`Testing isPalindrome(\"${word}\"):`);
   const actual = isPalindrome(word);
@@ -22,8 +22,7 @@ const assertPalindrome = function(word, expected) {
 }
 
 
-// TEST CODE
-// These should all pass assertion, but they don't.
+
 assertPalindrome('p', true);
 assertPalindrome('racecar', true);
 assertPalindrome('my gym', true);
@@ -31,6 +30,4 @@ assertPalindrome('foo', false);
 assertPalindrome('fluff', false);
 assertPalindrome('just some random words', false);
 
-// Bonus / Stretch: Uncomment these tests and figure out why these are also failing
-// assertPalindrome('Kayak', true);
-// assertPalindrome('a santa at NASA', true);
+
